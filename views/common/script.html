@@ -1,0 +1,47 @@
+
+
+
+    <script src="/public/js/require.js"></script>
+    <script>
+    	require.config({
+    		baseUrl:'/public',
+    		paths:{
+    			jquery:'assets/jquery/jquery.min',
+    			cookie:'assets/jquery-cookie/jquery.cookie',
+                echarts:'assets/echarts/echarts.min',
+                form:'assets/jquery-form/jquery.form',
+                validate:'assets/jquery-validate/jquery-validate.min',
+                Jcrop:'assets/Jcrop/js/Jcrop.min',
+                uploadify:'assets/uploadify/jquery.uploadify.min',
+                bootstrap: 'assets/bootstrap/js/bootstrap.min',
+                datepicker: 'assets/bootstrap-datepicker/js/bootstrap-datepicker.min',
+                language: 'assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
+    			template:'assets/artTemplate/template',
+    			nprogress:'assets/nprogress/nprogress',
+                region:'assets/jquery-region/jquery.region',
+                ckeditor:'assets/ckeditor/ckeditor'
+    		},
+            shim:{
+                Jcrop: {
+                    deps: ['jquery']
+                },
+                bootstrap: {
+                    deps: ['jquery']
+                },
+                language: {
+                    deps: ['datepicker']
+                },
+                uploadify: {
+                    deps: ['jquery']
+                },
+                ckeditor: {
+                    exports:'CKEDITOR'
+                },
+                validate: {
+                    deps: ['jquery']
+                }
+            }
+    	});
+
+    	require(['src/common','bootstrap']);
+    </script>
